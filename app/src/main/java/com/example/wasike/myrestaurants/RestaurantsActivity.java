@@ -44,7 +44,7 @@ public class RestaurantsActivity extends AppCompatActivity {
 
         mListView.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
-            public void onItemClick(AdapterView<?> adapterView, View view, int i, long l) {
+            public void onItemClick(AdapterView<?> adapterView, View view, int i3, long l) {
                 String restaurant = ((TextView)view).getText().toString();
                 Toast.makeText(RestaurantsActivity.this, restaurant, Toast.LENGTH_LONG).show();
                 Log.v("TAG", "In the onItemClickListener!");
