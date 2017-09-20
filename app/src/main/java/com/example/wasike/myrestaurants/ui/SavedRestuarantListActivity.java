@@ -16,7 +16,7 @@ import com.google.firebase.database.FirebaseDatabase;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 
-public class SavedResturantListActivity extends AppCompatActivity {
+public class SavedRestuarantListActivity extends AppCompatActivity {
     private DatabaseReference mRestaurantReference;
     private FirebaseRecyclerAdapter mFirebaseAdapter;
 
