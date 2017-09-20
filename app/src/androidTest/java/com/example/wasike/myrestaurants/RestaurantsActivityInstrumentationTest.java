@@ -1,7 +1,9 @@
-package com.example.wasike.myrestaurants;
+package com.example.wasike.myrestaurants.ui;
 
 import android.support.test.rule.ActivityTestRule;
 import android.view.View;
+
+import com.example.wasike.myrestaurants.R;
 
 import org.junit.Rule;
 import org.junit.Test;
