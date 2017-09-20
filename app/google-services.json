@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "678161901186",
+    "firebase_url": "https://myrestaurant-2510b.firebaseio.com",
+    "project_id": "myrestaurant-2510b",
+    "storage_bucket": "myrestaurant-2510b.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678161901186:android:41b9e476baaa7fd8",
+        "android_client_info": {
+          "package_name": "com.example.wasike.myrestaurants"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678161901186-1flrc5mi0n9ebs3uq51mn3qfti8oqvm9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCwH7RBc56sh_799TP_vrc7BZkNdmtFAZ0"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
