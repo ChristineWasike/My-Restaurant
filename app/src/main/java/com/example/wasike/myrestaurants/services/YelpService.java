@@ -1,6 +1,9 @@
-package com.example.wasike.myrestaurants;
+package com.example.wasike.myrestaurants.services;
 
-import android.companion.CompanionDeviceManager;
+import android.util.Log;
+
+import com.example.wasike.myrestaurants.Constants;
+import com.example.wasike.myrestaurants.models.Restaurant;
 
 import org.json.JSONArray;
 import org.json.JSONException;
@@ -15,7 +18,6 @@ import okhttp3.HttpUrl;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
-import se.akerfeldt.okhttp.signpost.SigningInterceptor;
 
 /**
  * Created by wasike on 11/09/17.
@@ -25,16 +27,18 @@ public class YelpService {
     public static void findRestaurants(String location, Callback callback) {
 
         HttpUrl.Builder urlBuilder = HttpUrl.parse(Constants.YELP_BASE_URL).newBuilder();
-        OkHttpClient client = new OkHttpClient();
 
         urlBuilder.addQueryParameter(Constants.YELP_LOCATION_QUERY_PARAMETER, location);
 
         String url = urlBuilder.build().toString();
 
+        OkHttpClient client = new OkHttpClient();
+
         Request request = new Request.Builder()
                 .header("Authorization", Constants.YELP_TOKEN)
                 .url(url)
                 .build();
+        Log.v("Information display", url);
 
         Call call = client.newCall(request);
         //Just for now will change shortly if necessary
@@ -68,14 +72,14 @@ public class YelpService {
                         address.add(addressJSON.get(y).toString());
                     }
 
-                    ArrayList<String> categories = new ArrayList<>();
-                    JSONArray categoriesJSON = restaurantJSON.getJSONArray("categories");
+//                    ArrayList<String> categories = new ArrayList<>();
+//                    JSONArray categoriesJSON = restaurantJSON.getJSONArray("categories");
 
-                    for (int y = 0; y < categoriesJSON.length(); y++) {
-                        categories.add(categoriesJSON.getJSONArray(y).get(0).toString());
-                    }
+//                    for (int y = 0; y < categoriesJSON.length(); y++) {
+//                        categories.add(categoriesJSON.getJSONArray(y).get(0).toString());
+//                    }
                     Restaurant restaurant = new Restaurant(name, phone, website, rating,
-                            imageUrl, address, categories);
+                            imageUrl, address);
                     restaurants.add(restaurant);
                 }
             }
